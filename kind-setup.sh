@@ -12,11 +12,7 @@ function start_registry() {
 	# create registry container unless it already exists
 	running=$(docker inspect -f '{{.State.Running}}' "${reg_name}" 2>/dev/null || true)
 	if [ "${running}" != 'true' ]; then
-		docker run \
-          #disable registry validation because some non-distributable images will fail when tanzu-relocate-images is executed
-          --env REGISTRY_VALIDATION_DISABLED=true \
-          -d --restart=always -p "${reg_port}:5000" --name "${reg_name}" \
-          registry:2
+		docker run --env REGISTRY_VALIDATION_DISABLED=true -d --restart=always -p "${reg_port}:5000" --name "${reg_name}" registry:2
 	fi
 }
 
