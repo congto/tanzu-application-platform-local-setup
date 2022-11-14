@@ -27,7 +27,7 @@ export INSTALL_REGISTRY_PASSWORD=${tanzu_net_pass}
 cd /tmp/tanzu-cluster-essentials
 ./install.sh --yes
 
-install /tmp/tanzu-cluster-essentials/kapp ~/scripts/kapp
-install /tmp/tanzu-cluster-essentials/imgpkg ~/scripts/imgpkg
-install /tmp/tanzu-cluster-essentials/kbld ~/scripts/kbld
-install /tmp/tanzu-cluster-essentials/ytt ~/scripts/ytt
+install /tmp/tanzu-cluster-essentials/kapp /usr/local/bin/kapp 
+install /tmp/tanzu-cluster-essentials/imgpkg /usr/local/bin/imgpkg
+install /tmp/tanzu-cluster-essentials/kbld /usr/local/bin/kbld
+install /tmp/tanzu-cluster-essentials/ytt /usr/local/bin/ytt

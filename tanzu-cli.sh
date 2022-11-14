@@ -20,8 +20,10 @@ pivnet download-product-files \
 
 tar -xvf /tmp/${glob} -C /tmp/tanzu-cli
 
+
 cd /tmp/tanzu-cli
-install cli/core/v0.*/tanzu-core-linux_amd64 ~/scripts/tanzu
+install cli/core/v0.*/tanzu-core-linux_amd64  /usr/local/bin/tanzu
+
 tanzu version
 tanzu plugin install --local cli all
 tanzu plugin list
