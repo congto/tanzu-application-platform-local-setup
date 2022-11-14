@@ -9,6 +9,7 @@ export INSTALL_REGISTRY_PASSWORD=password
 export INSTALL_REGISTRY_HOSTNAME=dev.local:5000
 
 kubectl create namespace tap-install
+
 tanzu secret registry add tap-registry \
   --username ${INSTALL_REGISTRY_USERNAME} \
   --password ${INSTALL_REGISTRY_PASSWORD} \
